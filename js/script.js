@@ -20,6 +20,33 @@ function ibg(){
 ibg();
 //-------
 
+document.addEventListener('DOMContentLoaded', function () {
+
+	var pressRelease = document.querySelectorAll('press-release');
+	var news = document.querySelectorAll('news');
+	var parentCards = document.querySelectorAll('cards__row');
+	var menuNewsLink = document.querySelectorAll('menu-news__link');
+	let obj = {};
+
+	//Select in menu-news
+	$('.menu-news__link').click(function(event) {
+		$('.menu-news__link').removeClass('select');
+		$(this).addClass('select');
+	});
+});
+
+
+
+//Don't move when click on link
+$(function () {
+	$(document).click((e) => {
+	  const {target} = e;
+	  if(target.nodeName === 'A' && target.getAttribute('href') === '#') {
+		e.preventDefault();
+	  }
+	});
+  });
+
 //Slider
 if($('.slider__body').length>0){
 	$(document).ready(function(){
