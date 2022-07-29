@@ -83,21 +83,15 @@
 						<div class="news__body">
 							<h2 class="news__title title">News & Media</h2>
 							<div class="news__menu menu-news">
-								<ul class="menu-news__list">
-									<li class="menu-news__item">
-										<a href="#" class="menu-news__link news">News</a>
-									</li>
-									<li class="menu-news__item">
-										<a href="#" class="menu-news__link press-release">Press<br>Release</a>
-									</li>
-									<li class="menu-news__item">
-										<a href="#" class="menu-news__link select">All</a>
-									</li>
-								</ul>
+								<div class="menu-news__list">
+									<button class="btn menu-news__link" onclick="filterSelection('news')">News</button>
+									<button class="btn menu-news__link" onclick="filterSelection('release')">Press<br>Release</button>
+									<button class="btn menu-news__link select" onclick="filterSelection('all')">all</button>
+								</div>
 							</div>
 							<div class="news__cards cards">
 								<div class="cards__row">
-									<div class="cards__item press-release">
+									<div class="cards__item filterDiv release">
 										<div class="cards__image ibg">
 											<img src="img/news/1.png" alt="news_1">
 											<div class="cards__subtitle">Press Release</div>
@@ -111,7 +105,7 @@
 											<a href="" class="cards__lnk">Read More</a>
 										</div>
 									</div>
-									<div class="cards__item news">
+									<div class="cards__item filterDiv news">
 										<div class="cards__image ibg">
 											<img src="img/news/2.png" alt="news_2">
 											<div class="cards__subtitle">News</div>
@@ -125,7 +119,7 @@
 											<a href="" class="cards__lnk">Read More</a>
 										</div>
 									</div>
-									<div class="cards__item press-release">
+									<div class="cards__item filterDiv release">
 										<div class="cards__image ibg">
 											<img src="img/news/3.png" alt="news_3">
 											<div class="cards__subtitle">Press Release</div>
@@ -156,7 +150,11 @@
 				<footer class="footer">
 					<div class="container">
 						<div class="footer__row">
-							
+							<div class="footer__copy">Business 2017</div>
+							<div class="footer__sections">
+								<a href="" class="footer__link">Terms & Conditions</a>
+								<a href="" class="footer__link">Privacy Policy</a>  	
+							</div>
 						</div>
 					</div>
 				</footer>
