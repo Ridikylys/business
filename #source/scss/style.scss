@@ -185,8 +185,8 @@ body {
 			background-color: #007397;
 			bottom: 0;
 			transition: all 0.5s ease 0s;
-
 		}
+
 		&:hover {
 			color: #007397;
 			&:after {
@@ -645,6 +645,7 @@ body {
 	}
 
 	&__link {
+		background-color: #fff;
 		color: #d3cfce;
 		font-family: "Montserrat";
 		font-size: 16px;
@@ -663,18 +664,17 @@ body {
 }
 .select {
 	color: #007397;
-	transition: all 0.3s cubic-bezier(.45,.05,.55,.95) 0s;
 }
 
 .cards {
 
 	&__row {
 		display: flex;
-		justify-content: space-between;
 		margin: 0px 0px 100px 0px;
 		@media (max-width: 767px) {
 			flex-direction: column;
 			align-items: center;
+			margin: 0px 0px 50px 0px;
 		}
 		
 	}
@@ -683,6 +683,13 @@ body {
 		max-width: 370px;
 		display: flex;
 		flex-direction: column;
+		margin: 0 15px;
+		&:first-child {
+			margin: 0px 15px 0px 0px;
+		}
+		&:last-child {
+			margin: 0px 0px 0px 15px;
+		}
 		@media (max-width:1182px) {
 			max-width: 300px;
 		}
@@ -692,7 +699,14 @@ body {
 		@media (max-width: 767px) {
 			max-width: 290px;
 			margin: 0px 0px 50px 0px;
+			&:first-child {
+				margin: 0px 0px 50px 0px;
+			}
+			&:last-child {
+				margin: 0px 0px 0px 0px;
+			}
 		}
+		
 	}
 
 	&__image {
@@ -806,6 +820,16 @@ body {
 	}
 }
 
+//Фильтр
+.filterDiv {
+	transition: all 0.3s cubic-bezier(.45,.05,.55,.95) 0s;
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
 .blue-cards {
 	transition: all 0.3s cubic-bezier(.45,.05,.55,.95) 0s;
 	padding: 500px 0;
@@ -829,6 +853,9 @@ body {
 
 	&__title {
 		margin: 0px 0px 45px 0px;
+		@media (max-width: 767px) {
+			margin: 0px 0px 20px 0px;
+		}
 	}
 
 	&__image {
@@ -836,6 +863,9 @@ body {
 		display: block;
 		position: relative;
 		margin: 0px 0px 45px 0px;
+		@media (max-width: 767px) {
+			padding-bottom: 100%;
+		}
 	}
 }
 
@@ -843,3 +873,73 @@ body {
 /*******************************************************************************
 							FOOTER
 *******************************************************************************/
+
+.footer {
+
+	margin: 0px 0px 40px 0px;
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: 550px) {
+			flex-direction: column;
+			margin: 0 auto;
+		}
+	}
+
+	&__copy {
+		color: #646667;
+		font-family: "Montserrat";
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: 1px;
+		line-height: 40px;
+		text-align: left;
+		text-transform: uppercase;
+		@media (max-width: 550px) {
+			text-align: center;
+		}
+	}
+
+	&__sections {
+	}
+
+	&__link {
+		color: #646667;
+		font-family: "Montserrat";
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: 1px;
+		line-height: 40px;
+		text-align: right;
+		text-transform: uppercase;
+		margin: 0 17px;
+		position: relative;
+		display: inline-block;
+		@media (max-width: 550px) {
+			display: block;
+			text-align: center;
+			margin: 0 auto;
+			max-width: 180px;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			width: 0;
+			height: 1px;
+			background-color: #007397;
+			bottom: 0;
+			transition: all 0.5s ease 0s;
+		}
+		
+		&:hover {
+			color: #007397;
+			&:after {
+				left: 0;
+				width: 100%;
+			}
+		}
+	}
+}
+
